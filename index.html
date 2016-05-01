@@ -14,9 +14,10 @@
     <style>
         .grid {
             width: 96%;
-            padding-left:2%;
+            padding-left: 2%;
             height: 20px !important;
         }
+        
         .ui-grid {
             border: 0;
         }
@@ -38,14 +39,20 @@
                 <label>Dictionaries</label>
                 <md-select ng-model="selectedItem">
                     <md-optgroup label="items">
-                        <md-option ng-value="item" ng-repeat="item in items">{{item}}</md-option>
+                        <md-option ng-value="item" ng-repeat="item in items">
+                            {{item}}
+                        </md-option>
                     </md-optgroup>
                 </md-select>
             </md-input-container>
-            <md-button ng-click="getFileContents();" class="md-raised md-primary">Edit</md-button>
+            <md-button ng-disabled="!selectedItem" ng-click="getFileContents();" 
+                class="md-raised md-primary">
+                Edit
+            </md-button>
         </div>
     </div>
-    <div ng-if="gridOptions.data.length > 0" ui-grid="gridOptions" class="grid"></div>
+    <div ng-if="gridOptions.data.length > 0" ui-grid="gridOptions" class="grid">        
+    </div>
 </body>
 
 </html>
