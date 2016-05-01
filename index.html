@@ -13,21 +13,22 @@
     <script src="app/data.js"></script>
     <style>
         .grid {
-            width: 800px;
+            width: 96%;
+            padding-left:2%;
             height: 20px !important;
+        }
+        .ui-grid {
+            border: 0;
         }
     </style>
 </head>
 
 <body ng-controller="MainCtrl">
-    <!--<div>
-        <md-select ng-model="user.state">
-            <md-option ng-repeat="state in states" value="{{state.abbrev}}">
-                {{state.abbrev}}
-            </md-option>
-        </md-select>
-    </div>-->
-
+    <md-toolbar>
+        <div class="md-toolbar-tools" layout-align="center center">
+            <img src="./img/Aerlinguslogo.png" />
+        </div>
+    </md-toolbar>
     <div class="md-padding" layout="row" layout-align="center center" ng-cloak>
         <div>
             <h1 class="md-title">Pick a dictionary</h1>
@@ -35,16 +36,16 @@
         <div>
             <md-input-container>
                 <label>Dictionaries</label>
-                <md-select ng-model="selectedItem" md-selected-text="getSelectedText()">
+                <md-select ng-model="selectedItem">
                     <md-optgroup label="items">
                         <md-option ng-value="item" ng-repeat="item in items">{{item}}</md-option>
                     </md-optgroup>
                 </md-select>
             </md-input-container>
-            <md-button class="md-raised md-primary">Edit</md-button>
+            <md-button ng-click="getFileContents();" class="md-raised md-primary">Edit</md-button>
         </div>
     </div>
-    <!--<div ui-grid="gridOptions" class="grid"></div>-->
+    <div ng-if="gridOptions.data.length > 0" ui-grid="gridOptions" class="grid"></div>
 </body>
 
 </html>
