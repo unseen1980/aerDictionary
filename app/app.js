@@ -1,6 +1,6 @@
 
 var dataBucket = require('./dataBucket')
-var app = angular.module('uigrid', ['ngMaterial', 'ui.grid']);
+var app = angular.module('uigrid', ['ngMaterial', 'ui.grid', 'ui.grid.edit']);
 
 
 app.config(function ($mdThemingProvider) {
