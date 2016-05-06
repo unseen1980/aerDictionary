@@ -1,6 +1,38 @@
 [
     {
-        "key": "btn_continue",
+        "key": "btn_continue0",
+        "en": "Continue",
+        "it": "Continua",
+        "el": "Συνεχεια",
+        "es": "Continuar",
+        "fr": "Continuer"
+    },
+    {
+        "key": "btn_continue1",
+        "en": "Continue",
+        "it": "Continua",
+        "el": "Συνεχεια",
+        "es": "Continuar",
+        "fr": "Continuer"
+    },
+    {
+        "key": "btn_continue2",
+        "en": "Continue",
+        "it": "Continua",
+        "el": "Συνεχεια",
+        "es": "Continuar",
+        "fr": "Continuer"
+    },
+    {
+        "key": "btn_continue3",
+        "en": "Continue",
+        "it": "Continua",
+        "el": "Συνεχεια",
+        "es": "Continuar",
+        "fr": "Continuer"
+    },
+    {
+        "key": "btn_continue4",
         "en": "Continue",
         "it": "Continua",
         "el": "Συνεχεια",

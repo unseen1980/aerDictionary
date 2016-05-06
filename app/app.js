@@ -1,6 +1,6 @@
-
-var dataBucket = require('./dataBucket')
-var app = angular.module('uigrid', ['ngMaterial', 'ui.grid', 'ui.grid.edit']);
+var dataBucket = require('./dataBucket');
+var ipc = require("electron").ipcRenderer;
+var app = angular.module('dictionaryApp', ['ngMaterial']);
 
 
 app.config(function ($mdThemingProvider) {
@@ -10,14 +10,10 @@ app.config(function ($mdThemingProvider) {
 });
 
 app.controller('MainCtrl', ['DictionariesService', '$scope',
-    function (DictionariesService, $scope) {
-        $scope.gridOptions = {
-            'data': []
-        };
+    function (DictionariesService, $scope) {        
         $scope.items = dataBucket.listOfJsonFiles();
         $scope.selectedItem = '';
         $scope.getFileContents = () => {
-            $scope.gridOptions.data =
-                DictionariesService.getFileContents($scope.selectedItem);
+            ipc.send('open-dictionary', DictionariesService.getFileContents($scope.selectedItem));
         };
     }]);

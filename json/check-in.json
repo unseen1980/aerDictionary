@@ -1,6 +1,38 @@
 [
     {
-        "key": "check_in",
+        "key": "check_in0",
+        "en": "Check in",
+        "it": "Check in",
+        "el": "Check in",
+        "es": "Check in",
+        "fr": "Check in"
+    },
+        {
+        "key": "check_in1",
+        "en": "Check in",
+        "it": "Check in",
+        "el": "Check in",
+        "es": "Check in",
+        "fr": "Check in"
+    },
+        {
+        "key": "check_in2",
+        "en": "Check in",
+        "it": "Check in",
+        "el": "Check in",
+        "es": "Check in",
+        "fr": "Check in"
+    },
+        {
+        "key": "check_in3",
+        "en": "Check in",
+        "it": "Check in",
+        "el": "Check in",
+        "es": "Check in",
+        "fr": "Check in"
+    },
+        {
+        "key": "check_in4",
         "en": "Check in",
         "it": "Check in",
         "el": "Check in",
